@@ -19,6 +19,11 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		99805A40E15D46CD6C7A36E7 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CDE627F2D9ED49C053CDBF /* libPods-Runner.a */; };
+		AE2E86AE244C4CCF0041858A /* RCToNaviteControllerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2E86AD244C4CCF0041858A /* RCToNaviteControllerPlugin.m */; };
+		AE2E86B2244C4DB00041858A /* RCVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2E86B1244C4DB00041858A /* RCVideoPlayController.m */; };
+		AE2E86B5244C523E0041858A /* RCVideoPlayerViewPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2E86B4244C523E0041858A /* RCVideoPlayerViewPlugin.m */; };
+		AE2E86B8244C585E0041858A /* RCVideoPlayerViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2E86B7244C585E0041858A /* RCVideoPlayerViewFactory.m */; };
+		AE2E86BB244C5DD60041858A /* RCVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2E86BA244C5DD60041858A /* RCVideoPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +61,16 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2E86AC244C4CCF0041858A /* RCToNaviteControllerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCToNaviteControllerPlugin.h; sourceTree = "<group>"; };
+		AE2E86AD244C4CCF0041858A /* RCToNaviteControllerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCToNaviteControllerPlugin.m; sourceTree = "<group>"; };
+		AE2E86B0244C4DB00041858A /* RCVideoPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCVideoPlayController.h; sourceTree = "<group>"; };
+		AE2E86B1244C4DB00041858A /* RCVideoPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCVideoPlayController.m; sourceTree = "<group>"; };
+		AE2E86B3244C523E0041858A /* RCVideoPlayerViewPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCVideoPlayerViewPlugin.h; sourceTree = "<group>"; };
+		AE2E86B4244C523E0041858A /* RCVideoPlayerViewPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCVideoPlayerViewPlugin.m; sourceTree = "<group>"; };
+		AE2E86B6244C585E0041858A /* RCVideoPlayerViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCVideoPlayerViewFactory.h; sourceTree = "<group>"; };
+		AE2E86B7244C585E0041858A /* RCVideoPlayerViewFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCVideoPlayerViewFactory.m; sourceTree = "<group>"; };
+		AE2E86B9244C5DD60041858A /* RCVideoPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCVideoPlayerViewController.h; sourceTree = "<group>"; };
+		AE2E86BA244C5DD60041858A /* RCVideoPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCVideoPlayerViewController.m; sourceTree = "<group>"; };
 		B22232948A37E7C3EDAE4CAE /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +131,8 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				AE2E86AF244C4D9A0041858A /* controller */,
+				AE5AFE19244C3A7F00C9C65F /* plugins */,
 				7AFFD8ED1D35381100E5BB4D /* AppDelegate.h */,
 				7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
@@ -137,6 +154,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AE2E86AF244C4D9A0041858A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE2E86B0244C4DB00041858A /* RCVideoPlayController.h */,
+				AE2E86B1244C4DB00041858A /* RCVideoPlayController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		AE5AFE19244C3A7F00C9C65F /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				AE2E86AC244C4CCF0041858A /* RCToNaviteControllerPlugin.h */,
+				AE2E86AD244C4CCF0041858A /* RCToNaviteControllerPlugin.m */,
+				AE2E86B3244C523E0041858A /* RCVideoPlayerViewPlugin.h */,
+				AE2E86B4244C523E0041858A /* RCVideoPlayerViewPlugin.m */,
+				AE2E86B6244C585E0041858A /* RCVideoPlayerViewFactory.h */,
+				AE2E86B7244C585E0041858A /* RCVideoPlayerViewFactory.m */,
+				AE2E86B9244C5DD60041858A /* RCVideoPlayerViewController.h */,
+				AE2E86BA244C5DD60041858A /* RCVideoPlayerViewController.m */,
+			);
+			path = plugins;
+			sourceTree = "<group>";
+		};
 		B4D13737518407AB1D714542 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +185,6 @@
 				0D9780E85C8A0C9E0404C20F /* Pods-Runner.release.xcconfig */,
 				48B9375EEAA47DF9C529BF60 /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,7 +301,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		97FC94FBE64F5FFDDE874BA5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -292,7 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE2E86BB244C5DD60041858A /* RCVideoPlayerViewController.m in Sources */,
 				978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */,
+				AE2E86B8244C585E0041858A /* RCVideoPlayerViewFactory.m in Sources */,
+				AE2E86AE244C4CCF0041858A /* RCToNaviteControllerPlugin.m in Sources */,
+				AE2E86B5244C523E0041858A /* RCVideoPlayerViewPlugin.m in Sources */,
+				AE2E86B2244C4DB00041858A /* RCVideoPlayController.m in Sources */,
 				97C146F31CF9000F007C117D /* main.m in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);

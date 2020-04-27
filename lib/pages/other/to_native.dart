@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,6 +20,22 @@ class _ToNativePage extends State<ToNativePage> {
       print(result);
     } on PlatformException catch (e) {
       print(e);
+    }
+  }
+
+  nativeView() {
+    if (Platform.isAndroid) {
+      return AndroidView(
+        viewType: 'plugins.bms_video_player/view',
+        onPlatformViewCreated: null,
+        creationParamsCodec: const StandardMessageCodec(),
+      );
+    } else {
+      return UiKitView(
+        viewType: 'plugins.bms_video_player/view',
+        onPlatformViewCreated: null,
+        creationParamsCodec: const StandardMessageCodec(),
+      );
     }
   }
 
@@ -45,7 +63,10 @@ class _ToNativePage extends State<ToNativePage> {
                 fontWeight: FontWeight.w900,
                 fontFamily: "Georgia",
               ),
-            )
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+            ),
           ],
         ),
       ),

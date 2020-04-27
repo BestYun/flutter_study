@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SafeAreaPage extends StatefulWidget {
-  String title;
+  final String title;
   SafeAreaPage({this.title});
 
   @override

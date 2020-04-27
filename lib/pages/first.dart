@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/model/list_item.dart';
 
 import 'package:flutter_study/pages/overlay_widget.dart';
+import 'package:flutter_study/pages/widgets/grid_view_page.dart';
 import 'package:flutter_study/pages/widgets/safe_area_page.dart';
 import 'package:flutter_study/utils/log_util.dart';
 import 'package:flutter_study/utils/num_ext.dart';
@@ -22,10 +23,17 @@ class _FirstPageState extends State<FirstPage>
 
   List<ListItemData> data = [
     ListItemData(
+      title: "SafeArea",
+      page: SafeAreaPage(
         title: "SafeArea",
-        page: SafeAreaPage(
-          title: "SafeArea",
-        )),
+      ),
+    ),
+    ListItemData(
+      title: "GridView",
+      page: GridViewPage(
+        title: "GridView",
+      ),
+    ),
     ListItemData(title: "Overlay", page: OverlayWidget()),
   ];
 
