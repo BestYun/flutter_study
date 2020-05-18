@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/model/list_item.dart';
 
 import 'package:flutter_study/pages/overlay_widget.dart';
+import 'package:flutter_study/pages/widgets/about_dialog.dart';
+import 'package:flutter_study/pages/widgets/alert_dialog_page.dart';
 import 'package:flutter_study/pages/widgets/grid_view_page.dart';
 import 'package:flutter_study/pages/widgets/safe_area_page.dart';
 import 'package:flutter_study/utils/log_util.dart';
@@ -21,25 +23,33 @@ class _FirstPageState extends State<FirstPage>
     super.initState();
   }
 
-  List<ListItemData> data = [
-    ListItemData(
-      title: "SafeArea",
-      page: SafeAreaPage(
-        title: "SafeArea",
-      ),
-    ),
-    ListItemData(
-      title: "GridView",
-      page: GridViewPage(
-        title: "GridView",
-      ),
-    ),
-    ListItemData(title: "Overlay", page: OverlayWidget()),
-  ];
-
   @override
   Widget build(BuildContext context) {
     super.build(context);
+    // 暂时放在这，方便刷新
+    List<ListItemData> data = [
+      ListItemData(
+        title: "SafeArea",
+        page: SafeAreaPage(
+          title: "SafeArea",
+        ),
+      ),
+      ListItemData(
+        title: "GridView",
+        page: GridViewPage(
+          title: "GridView",
+        ),
+      ),
+      ListItemData(title: "Overlay", page: OverlayWidget()),
+      ListItemData(
+        title: "AboutDialog",
+        page: AboutDialogPage(title: "AboutDialog"),
+      ),
+      ListItemData(
+        title: "AlertDialogPage",
+        page: AlertDialogPage(title: "AlertDialog"),
+      ),
+    ];
 
     LogUtil.v("first page = " + 100.adapter().toString());
 // #2ABFE3 #4499EC
@@ -61,9 +71,13 @@ class _FirstPageState extends State<FirstPage>
               margin: EdgeInsets.all(10),
             ),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return item.page;
-              }));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return item.page;
+                  },
+                ),
+              );
             },
           );
         },
