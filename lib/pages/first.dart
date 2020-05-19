@@ -61,14 +61,22 @@ class _FirstPageState extends State<FirstPage>
         itemBuilder: (context, index) {
           ListItemData item = data[index];
           return GestureDetector(
-            child: Container(
-              child: Text(item.title),
-              height: 30,
-              decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(width: 0.5, color: Color(0xff666666))),
-              ),
-              margin: EdgeInsets.all(10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                    height: 40,
+                    alignment: Alignment.centerLeft,
+                    child: Text(item.title),
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                    ),
+                    margin: EdgeInsets.symmetric(horizontal: 15)),
+                Divider(
+                  height: 1,
+                ),
+              ],
             ),
             onTap: () {
               Navigator.of(context).push(
