@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/list_item.dart';
+import 'package:flutter_study/pages/other/inherited_widget.dart';
 
 import 'package:flutter_study/pages/overlay_widget.dart';
 import 'package:flutter_study/pages/widgets/about_dialog.dart';
@@ -48,6 +49,14 @@ class _FirstPageState extends State<FirstPage>
       ListItemData(
         title: "AlertDialogPage",
         page: AlertDialogPage(title: "AlertDialog"),
+      ),
+      ListItemData(
+        title: "AlertDialogPage",
+        page: AlertDialogPage(title: "AlertDialog"),
+      ),
+      ListItemData(
+        title: "InheritedWidgetPage",
+        page: InheritedWidgetPage(title: "InheritedWidgetPage"),
       ),
     ];
 
