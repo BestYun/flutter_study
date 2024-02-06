@@ -1,0 +1,6 @@
+framework module Pods_FlutterAddToApp {
+  umbrella header "Pods-FlutterAddToApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
