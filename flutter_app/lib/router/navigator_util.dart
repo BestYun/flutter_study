@@ -1,5 +1,5 @@
-import 'package:flutter_app/router/router.dart';
 import 'package:go_router/go_router.dart';
+import '../global.dart';
 
 class NavigatorUtil {
   static var context = navigatorKey.currentContext!;

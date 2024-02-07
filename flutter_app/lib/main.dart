@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/router/router.dart';
+import 'package:flutter_app/utils/log_util.dart';
 
 void main() {
+  setLogging(enabled: true);
   runApp(const MyApp());
 }
 

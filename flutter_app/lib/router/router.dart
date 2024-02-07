@@ -4,8 +4,8 @@ import 'package:flutter_app/pages/home_page.dart';
 import 'package:flutter_app/pages/page2.dart';
 import 'package:go_router/go_router.dart';
 
-// 全局key，用于无context跳转的情况
-final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+import '../global.dart';
+import '../utils/log_util.dart';
 
 enum PageName {
   home,
@@ -15,12 +15,12 @@ enum PageName {
 class MyNavigatorObserver extends NavigatorObserver {
   @override
   void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
-    print('did push route');
+    log('did push route');
   }
 
   @override
   void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) {
-    print('did pop route');
+    log('did pop route');
   }
 }
 
